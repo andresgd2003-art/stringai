@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sting-AI - Automatización Inteligente</title>
+    
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Oswald & Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- Lazysizes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #26a69a; /* Teal */
+            --secondary-color: #ffab40; /* Amber */
+            --background-color: #eceff1; /* Blue Grey Lighten-5 */
+            --text-color: #263238; /* Blue Grey Darken-4 */
+            --white-text: #ffffff;
+            --black-bg: #000000;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+        }
+
+        .brand-logo img {
+            height: 146px;
+            margin-top: -20px;
+            border-radius: 50%;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 500;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .pain-points {
+            background-color: var(--black-bg);
+            color: var(--white-text);
+        }
+        
+        .pain-points h4 {
+            color: var(--white-text);
+        }
+
+        .solution {
+            background-color: var(--primary-color);
+            color: var(--white-text);
+        }
+        
+        .solution .collection {
+            border: none;
+        }
+        
+        .solution .collection .collection-item {
+            background-color: transparent;
+            color: var(--white-text);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .text-justify {
+            text-align: justify;
+        }
+
+        .how-it-works {
+            background-color: var(--white-text);
+        }
+        
+        .how-it-works .card-panel {
+            background-color: var(--primary-color);
+            color: var(--white-text);
+        }
+        
+        .how-it-works .card-panel h4 {
+            color: var(--white-text);
+        }
+        
+        .how-it-works .card-panel i {
+            font-size: 4rem;
+        }
+        
+        .features {
+            background-image: url('images/fondo tecnologico 1.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white-text);
+        }
+        
+        .features .card-panel i {
+            font-size: 4rem;
+        }
+
+        .testimonials {
+            background-color: var(--white-text);
+        }
+
+        .cta {
+            background-color: var(--primary-color);
+            color: var(--white-text);
+        }
+
+        .footer {
+            background-color: #263238; /* Blue Grey Darken-4 */
+            color: var(--white-text);
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: #b0bec5; /* Blue Grey Lighten-3 */
+        }
+
+        .footer a:hover {
+            color: var(--white-text);
+        }
+        
+        .pain-points img {
+            height: 120px;
+        }
+        
+        /* Mobile Simulation Styles */
+        .mobile-simulation-container {
+            background-color: var(--primary-color);
+            padding: 80px 0;
+        }
+        
+        .phone-frame {
+            width: 350px;
+            height: 700px;
+            background-color: #111b21;
+            border-radius: 40px;
+            
+            padding: 20px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .phone-status-bar {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+        
+        .phone-chat-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #2a3b4b;
+            color: white;
+        }
+        
+        .phone-chat-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .phone-chat-body {
+            flex-grow: 1;
+            background-color: #e5ddd5;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message-bubble {
+            max-width: 85%;
+            padding: 8px 12px;
+            border-radius: 12px;
+            position: relative;
+            word-wrap: break-word;
+            text-align: left;
+            opacity: 0;
+        }
+        
+        .sent {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+        
+        .received {
+            background-color: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="white">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo"><img data-src="images/logo.png" alt="Sting-AI Logo" class="lazyload"></a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#problema" class="black-text">El Problema</a></li>
+                    <li><a href="#solucion" class="black-text">La Solución</a></li>
+                    <li><a href="#como-funciona" class="black-text">Cómo Funciona</a></li>
+                    <li><a href="#caracteristicas" class="black-text">Características</a></li>
+                    <li><a href="#testimonios" class="black-text">Testimonios</a></li>
+                    <li><a class="waves-effect waves-light btn secondary-color" href="#cta">Agendar Consulta</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="#problema">El Problema</a></li>
+        <li><a href="#solucion">La Solución</a></li>
+        <li><a href="#como-funciona">Cómo Funciona</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a class="waves-effect waves-light btn secondary-color" href="#cta">Agendar Consulta</a></li>
+    </ul>
+
+    <!-- Hero Section - Mobile Simulation -->
+    <section class="mobile-simulation-container">
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 l6">
+                    <div class="phone-frame">
+                        <div class="phone-status-bar">
+                            <span>9:41</span>
+                            <div>
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                        </div>
+                        <div class="phone-chat-header">
+                            <img data-src="images/logo.png" alt="Sting-AI Logo" class="lazyload">
+                            <div>
+                                <div>Sting-AI</div>
+                                <div style="font-size: 12px; color: #b0bec5;">en línea</div>
+                            </div>
+                        </div>
+                        <div class="phone-chat-body">
+                            <div class="message-bubble received anime-chat-message">¡Hola! Bienvenido/a a Sting-AI.</div>
+                            <div class="message-bubble received anime-chat-message">Soy tu asistente virtual, ¿en qué puedo ayudarte?</div>
+                            <div class="message-bubble sent anime-chat-message">Hola, quiero agendar una cita.</div>
+                            <div class="message-bubble received anime-chat-message">¡Claro! ¿Para qué servicio?</div>
+                            <div class="message-bubble sent anime-chat-message">Corte de caballero.</div>
+                            <div class="message-bubble received anime-chat-message">Perfecto. Tengo disponibilidad mañana a las 3:00 PM. ¿Te parece bien?</div>
+                            <div class="message-bubble sent anime-chat-message">Sí, me parece perfecto.</div>
+                            <div class="message-bubble received anime-chat-message">¡Listo! Tu cita ha sido agendada.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l6 anime-solution-text">
+                    <h2 class="section-title left-align">Presentamos Sting-AI: Tu Asistente Virtual Inteligente.</h2>
+                    <p class="flow-text text-justify">Sting-AI es la <strong>plataforma de automatización definitiva</strong> que trabaja por ti 24/7. Nuestro escorpión inteligente captura, atiende y agenda por WhatsApp, llamadas y tu propia landing page, para que tú te dediques exclusivamente a <strong>hacer crecer tu negocio</strong>.</p>
+                    <div class="collection">
+                        <a href="#!" class="collection-item anime-solution-item"><i class="material-icons left">monetization_on</i><strong>Nunca más una venta perdida:</strong> Atención inmediata y seguimiento a cada cliente potencial.</a>
+                        <a href="#!" class="collection-item anime-solution-item"><i class="material-icons left">event_available</i><strong>Agenda 100% automatizada:</strong> Citas, recordatorios y notificaciones gestionadas sin esfuerzo.</a>
+                        <a href="#!" class="collection-item anime-solution-item"><i class="material-icons left">web</i><strong>Imagen profesional online:</strong> Una landing page que convierte visitantes en clientes al instante.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Problema (Pain Points) -->
+    <section id="problema" class="section pain-points">
+        <div class="container">
+            <h2 class="section-title">¿Tu día a día se ve así?</h2>
+            <p class="center-align flow-text" style="margin-bottom: 50px;">Sabemos que gestionar las comunicaciones y citas de tu negocio consume tiempo valioso. Si te identificas con esto, Sting-AI es para ti:</p>
+            <div class="row">
+                <div class="col s12 m6 l3 center-align anime-pain-point">
+                    <img data-src="images/icono 247.png" alt="Clientes sin respuesta" class="lazyload">
+                    <h4>Clientes sin respuesta</h4>
+                    <p>Mensajes de WhatsApp o llamadas a deshoras que se quedan sin contestar.</p>
+                </div>
+                <div class="col s12 m6 l3 center-align anime-pain-point">
+                    <img data-src="images/simbolo cita agendada.png" alt="Agenda desordenada" class="lazyload">
+                    <h4>Agenda desordenada</h4>
+                    <p>Agendar citas manualmente te quita tiempo, causa errores y dobles reservas.</p>
+                </div>
+                <div class="col s12 m6 l3 center-align anime-pain-point">
+                    <img data-src="images/icono recordatorio.png" alt="Oportunidades perdidas" class="lazyload">
+                    <h4>Oportunidades perdidas</h4>
+                    <p>Clientes que olvidan sus citas o leads que se enfrían por falta de seguimiento.</p>
+                </div>
+                <div class="col s12 m6 l3 center-align anime-pain-point">
+                    <img data-src="images/icono landing page.png" alt="Imagen limitada" class="lazyload">
+                    <h4>Imagen limitada</h4>
+                    <p>Necesitas una presencia online profesional que convierta, pero no sabes por dónde empezar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Cómo Funciona -->
+    <section id="como-funciona" class="section how-it-works">
+        <div class="container">
+            <h2 class="section-title">Empezar a automatizar tu éxito es así de simple.</h2>
+            <p class="center-align flow-text" style="margin-bottom: 50px;">Nuestro proceso está diseñado para ser rápido y sin complicaciones. Tú nos dices qué necesitas, y nosotros nos encargamos de que Sting-AI transforme tu operación.</p>
+            <div class="row">
+                <div class="col s12 m4 center-align anime-how-step">
+                    <div class="card-panel hoverable">
+                        <i class="material-icons">lightbulb_outline</i>
+                        <h4>Diagnóstico y Diseño</h4>
+                        <p>Analizamos tus necesidades y configuramos el flujo de comunicación perfecto para tus chatbots y landing page.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4 center-align anime-how-step">
+                    <div class="card-panel hoverable">
+                        <i class="material-icons">rocket_launch</i>
+                        <h4>Implementación</h4>
+                        <p>Integramos tus chatbots en WhatsApp y llamadas, y publicamos tu landing page personalizada rápidamente.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4 center-align anime-how-step">
+                    <div class="card-panel hoverable">
+                        <i class="material-icons">dashboard</i>
+                        <h4>Lanzamiento y Control</h4>
+                        <p>Activamos tu asistente virtual. Desde ahora, Sting-AI trabaja para ti, y tú recibes un registro detallado de cada interacción.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section id="caracteristicas" class="section features">
+        <div class="container">
+            <h2 class="section-title">Todo lo que Sting-AI hace por tu negocio.</h2>
+            <div class="row">
+                <div class="col s12 m6 l4 anime-feature">
+                    <div class="card-panel white black-text hoverable center-align">
+                        <i class="material-icons">smart_toy</i>
+                        <h4>Chatbots 24/7</h4>
+                        <p>Respuestas instantáneas y personalizadas en WhatsApp y llamadas, disponibles a toda hora para no perder un solo cliente.</p>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4 anime-feature">
+                    <div class="card-panel white black-text center-align hoverable">
+                        <img data-src="images/calendario virtual.png" alt="Agenda y Calendario Virtual" class="responsive-img lazyload" style="margin-bottom: 15px;">
+                        <h4>Agenda Virtual</h4>
+                        <p>Gestiona citas, disponibilidad y reservas automáticamente. Sincroniza con tus calendarios favoritos.</p>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4 anime-feature">
+                    <div class="card-panel white black-text center-align hoverable">
+                        <i class="material-icons">notifications</i>
+                        <h4>Recordatorios</h4>
+                        <p>Mantén a tus clientes informados y reduce ausencias con recordatorios personalizados.</p>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4 anime-feature">
+                    <div class="card-panel white black-text center-align hoverable">
+                        <i class="material-icons">important_devices</i>
+                        <h4>Landing Pages</h4>
+                        <p>Diseño y hosting 100% personalizado para tus redes sociales, integrando tus chatbots para capturar leads.</p>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4 anime-feature">
+                    <div class="card-panel white black-text hoverable center-align">
+                        <i class="material-icons">dns</i>
+                        <h4>Base de Datos</h4>
+                        <p>Toda la información de tus clientes y conversaciones almacenada para análisis y seguimiento estratégico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que nuestros clientes dicen.</h2>
+            <div class="row">
+                <div class="col s12 m6 anime-testimonial">
+                    <div class="card-panel">
+                        <p class="flow-text">"Gracias a Sting-AI, mis citas aumentaron un 30% y ahora puedo descansar sabiendo que mis clientes siempre están atendidos."</p>
+                        <p class="right-align">- Nombre del Cliente, Tipo de Negocio</p>
+                    </div>
+                </div>
+                <div class="col s12 m6 anime-testimonial">
+                    <div class="card-panel">
+                        <p class="flow-text">"La landing page personalizada y el chatbot son una maravilla. Mi negocio se ve más profesional y los leads me llegan solos."</p>
+                        <p class="right-align">- Nombre del Cliente, Tipo de Negocio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cta" class="section cta">
+        <div class="container center-align">
+            <h2 class="section-title anime-cta-title">Da el salto a la automatización.</h2>
+            <p class="flow-text anime-cta-subtitle" style="margin-bottom: 40px;">¿Listo para dejar de perder tiempo y empezar a capturar cada oportunidad 24/7? Agenda una consulta gratuita y descubre cómo Sting-AI transformará tu atención al cliente y tus ventas.</p>
+            <div>
+                <a href="https://wa.me/526181110696?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20gratuita." class="waves-effect waves-light btn-large secondary-color anime-cta-button" target="_blank"><i class="material-icons right">chat</i>WhatsApp</a>
+                <a href="tel:+526181110696" class="waves-effect waves-light btn-large secondary-color anime-cta-button"><i class="material-icons right">call</i>Llamar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <img data-src="images/logo.png" alt="Sting-AI Logo" class="lazyload" style="height: 50px; border-radius: 50%;">
+                    <p>© 2024 Sting-AI. Todos los derechos reservados.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><a href="mailto:contacto@sting-ai.com"><i class="material-icons left">email</i> contacto@sting-ai.com</a></li>
+                        <li><a href="tel:+526181110696"><i class="material-icons left">phone</i> +52 618 111 0696</a></li>
+                    </ul>
+                    <h5>Redes Sociales</h5>
+                    <a href="#" class="me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            Aviso de Privacidad | Términos y Condiciones
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Sidenav
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+        // Anime.js animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetClass = Array.from(entry.target.classList).find(c => c.startsWith('anime-'));
+                    if (targetClass) {
+                        if(targetClass === 'anime-chat-message'){
+                            anime.timeline({
+                                easing: 'easeOutExpo'
+                            })
+                            .add({
+                                targets: '.anime-chat-message',
+                                translateY: [50, 0],
+                                opacity: [0, 1],
+                                delay: anime.stagger(1000)
+                            });
+                        } else if(targetClass === 'anime-counter'){
+                            const target = entry.target;
+                            const targetNumber = target.dataset.target;
+                            anime({
+                                targets: target,
+                                innerHTML: [0, targetNumber],
+                                round: 1,
+                                easing: 'easeOutExpo',
+                                duration: 1500
+                            });
+                        } else if (targetClass === 'anime-solution-item') {
+                            anime({
+                                targets: '.anime-solution-item',
+                                translateX: [-100, 0],
+                                opacity: [0, 1],
+                                delay: anime.stagger(200)
+                            });
+                        } else if (targetClass === 'anime-how-step') {
+                            anime({
+                                targets: '.anime-how-step',
+                                translateY: [100, 0],
+                                opacity: [0, 1],
+                                delay: anime.stagger(200)
+                            });
+                        } else if (targetClass === 'anime-feature') {
+                            anime({
+                                targets: '.anime-feature',
+                                scale: [0.8, 1],
+                                opacity: [0, 1],
+                                delay: anime.stagger(100)
+                            });
+                        } else if (targetClass === 'anime-testimonial') {
+                            anime({
+                                targets: '.anime-testimonial',
+                                opacity: [0, 1],
+                                delay: anime.stagger(200)
+                            });
+                        } else if (targetClass === 'anime-cta-button') {
+                            anime({
+                                targets: '.anime-cta-button',
+                                scale: [0.9, 1],
+                                opacity: [0, 1],
+                                delay: anime.stagger(100)
+                            });
+                        } else {
+                            anime({
+                                targets: '.' + targetClass,
+                                translateY: [50, 0],
+                                opacity: [0, 1],
+                                delay: anime.stagger(100),
+                                easing: 'easeOutExpo'
+                            });
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[class*="anime-"]').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+
+</body>
+</html>

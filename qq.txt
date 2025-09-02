@@ -1,0 +1,19 @@
+este es mi repositorio: git remote add origin https://github.com/andresgd2003-art/barberialaclasicademo.git
+
+
+¡Hecho! Aquí tienes la lista únicamente con los comandos de Git que se usan en el video:
+
+1.  **`git init`**
+    * Para inicializar un repositorio de Git en la carpeta del proyecto.
+
+2.  **`git remote add origin [URL_DEL_REPOSITORIO]`**
+    * Para conectar el repositorio local con el repositorio remoto en GitHub.
+
+3.  **`git add .`**
+    * Para añadir todos los archivos del proyecto al área de preparación (staging).
+
+4.  **`git commit -m "subida"`**
+    * Para guardar los cambios en el repositorio local con un mensaje descriptivo.
+
+5.  **`git push origin master`**
+    * Para subir los cambios desde el repositorio local al repositorio remoto en GitHub.
