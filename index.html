@@ -14,6 +14,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #111b21;
             color: #ffffff;
+            overflow-x: hidden; /* Prevent horizontal scrollbar from animations */
         }
         .scroll-section {
             min-height: 100vh;
@@ -111,6 +112,7 @@
             border-radius: 1rem;
             text-align: center;
             transition: transform 0.3s;
+            height: 100%; /* Make cards same height */
         }
         .feature-card:hover {
             transform: translateY(-10px);
@@ -127,7 +129,7 @@
     <!-- Navbar -->
     <nav class="bg-gray-800 p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold flex items-center"><img src="images/logo.png" alt="Sting-AI Logo" class="h-10 mr-3 rounded-full"> Sting-AI</a>
+            <a href="#" class="text-2xl font-bold flex items-center"><img src="images/logo sin texto.png" alt="Sting-AI Logo" class="h-16 mr-3 rounded-full" style="transform: scale(1.2); transform-origin: center center; transition: transform 0.3s ease-in-out;"> <span class="ml-2">Sting-AI</span></a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#problema" class="hover:text-cyan-400">El Problema</a>
                 <a href="#solucion" class="hover:text-cyan-400">La Solución</a>
@@ -150,14 +152,14 @@
 
     <!-- Hero Section -->
     <section class="scroll-section">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="text-left">
+                <div class="text-left reveal-left">
                     <h1 class="text-5xl font-bold mb-4">Presentamos <span class="brand-cyan">Sting-AI</span>: Tu Asistente Virtual Inteligente.</h1>
                     <p class="text-xl text-gray-300 mb-6">Sting-AI es la <strong>plataforma de automatización definitiva</strong> que trabaja por ti 24/7. Nuestro escorpión inteligente captura, atiende y agenda por WhatsApp, llamadas y tu propia landing page, para que tú te dediques exclusivamente a <strong>hacer crecer tu negocio</strong>.</p>
                     <a href="#cta" class="btn btn-primary">Descubre cómo</a>
                 </div>
-                <div class="flex justify-center">
+                <div class="flex justify-center reveal-right">
                     <div class="phone-frame">
                         <div class="phone-chat-header">
                             <img src="images/logo.png" alt="Sting-AI Logo">
@@ -185,25 +187,25 @@
     <!-- El Problema -->
     <section id="problema" class="scroll-section bg-black">
         <div class="container mx-auto text-center">
-            <h2 class="section-title">¿Tu día a día se ve así?</h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">Sabemos que gestionar las comunicaciones y citas de tu negocio consume tiempo valioso. Si te identificas con esto, Sting-AI es para ti:</p>
+            <h2 class="section-title reveal-up">¿Tu día a día se ve así?</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 reveal-up" data-sr-delay="100">Sabemos que gestionar las comunicaciones y citas de tu negocio consume tiempo valioso. Si te identificas con esto, Sting-AI es para ti:</p>
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
+                <div class="text-center reveal-zoom">
                     <img src="images/icono 247.png" alt="Clientes sin respuesta" class="h-24 mx-auto mb-4">
                     <h3 class="text-xl font-bold mb-2">Clientes sin respuesta</h3>
                     <p class="text-gray-400">Mensajes de WhatsApp o llamadas a deshoras que se quedan sin contestar.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal-zoom" data-sr-delay="100">
                     <img src="images/simbolo cita agendada.png" alt="Agenda desordenada" class="h-24 mx-auto mb-4">
                     <h3 class="text-xl font-bold mb-2">Agenda desordenada</h3>
                     <p class="text-gray-400">Agendar citas manualmente te quita tiempo, causa errores y dobles reservas.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal-zoom" data-sr-delay="200">
                     <img src="images/icono recordatorio.png" alt="Oportunidades perdidas" class="h-24 mx-auto mb-4">
                     <h3 class="text-xl font-bold mb-2">Oportunidades perdidas</h3>
                     <p class="text-gray-400">Clientes que olvidan sus citas o leads que se enfrían por falta de seguimiento.</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center reveal-zoom" data-sr-delay="300">
                     <img src="images/icono landing page.png" alt="Imagen limitada" class="h-24 mx-auto mb-4">
                     <h3 class="text-xl font-bold mb-2">Imagen limitada</h3>
                     <p class="text-gray-400">Necesitas una presencia online profesional que convierta, pero no sabes por dónde empezar.</p>
@@ -215,21 +217,21 @@
     <!-- Cómo Funciona -->
     <section id="como-funciona" class="scroll-section">
         <div class="container mx-auto text-center">
-            <h2 class="section-title">Empezar a automatizar tu éxito es así de simple.</h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">Nuestro proceso está diseñado para ser rápido y sin complicaciones. Tú nos dices qué necesitas, y nosotros nos encargamos de que Sting-AI transforme tu operación.</p>
+            <h2 class="section-title reveal-up">Empezar a automatizar tu éxito es así de simple.</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 reveal-up" data-sr-delay="100">Nuestro proceso está diseñado para ser rápido y sin complicaciones. Tú nos dices qué necesitas, y nosotros nos encargamos de que Sting-AI transforme tu operación.</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card">
-                    <i class="fas fa-lightbulb"></i>
+                <div class="feature-card reveal-up">
+                    <img src="images/diagnostico.png" alt="Diagnóstico y Diseño" class="h-24 mx-auto mb-4 rounded-lg">
                     <h3 class="text-2xl font-bold mb-2">Diagnóstico y Diseño</h3>
                     <p>Analizamos tus necesidades y configuramos el flujo de comunicación perfecto para tus chatbots y landing page.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-rocket"></i>
+                <div class="feature-card reveal-up" data-sr-delay="100">
+                    <img src="images/implementacion.png" alt="Implementación" class="h-24 mx-auto mb-4 rounded-lg">
                     <h3 class="text-2xl font-bold mb-2">Implementación</h3>
                     <p>Integramos tus chatbots en WhatsApp y llamadas, y publicamos tu landing page personalizada rápidamente.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-tachometer-alt"></i>
+                <div class="feature-card reveal-up" data-sr-delay="200">
+                    <img src="images/lanzamiento.png" alt="Lanzamiento y Control" class="h-24 mx-auto mb-4 rounded-lg">
                     <h3 class="text-2xl font-bold mb-2">Lanzamiento y Control</h3>
                     <p>Activamos tu asistente virtual. Desde ahora, Sting-AI trabaja para ti, y tú recibes un registro detallado de cada interacción.</p>
                 </div>
@@ -240,34 +242,34 @@
     <!-- Características -->
     <section id="caracteristicas" class="scroll-section bg-gray-800">
         <div class="container mx-auto text-center">
-            <h2 class="section-title">Todo lo que <span class="brand-cyan">Sting-AI</span> hace por tu negocio.</h2>
+            <h2 class="section-title reveal-up">Todo lo que <span class="brand-cyan">Sting-AI</span> hace por tu negocio.</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom">
                     <i class="fas fa-robot"></i>
                     <h3 class="text-2xl font-bold mb-2">Chatbots 24/7</h3>
                     <p>Respuestas instantáneas y personalizadas en WhatsApp y llamadas, disponibles a toda hora para no perder un solo cliente.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom" data-sr-delay="100">
                     <i class="fas fa-calendar-alt"></i>
                     <h3 class="text-2xl font-bold mb-2">Agenda Virtual</h3>
                     <p>Gestiona citas, disponibilidad y reservas automáticamente. Sincroniza con tus calendarios favoritos.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom" data-sr-delay="200">
                     <i class="fas fa-bell"></i>
                     <h3 class="text-2xl font-bold mb-2">Recordatorios</h3>
                     <p>Mantén a tus clientes informados y reduce ausencias con recordatorios personalizados.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom">
                     <i class="fas fa-desktop"></i>
                     <h3 class="text-2xl font-bold mb-2">Landing Pages</h3>
                     <p>Diseño y hosting 100% personalizado para tus redes sociales, integrando tus chatbots para capturar leads.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom" data-sr-delay="100">
                     <i class="fas fa-database"></i>
                     <h3 class="text-2xl font-bold mb-2">Base de Datos</h3>
                     <p>Toda la información de tus clientes y conversaciones almacenada para análisis y seguimiento estratégico.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal-zoom" data-sr-delay="200">
                     <i class="fas fa-chart-line"></i>
                     <h3 class="text-2xl font-bold mb-2">Estadísticas y Reportes</h3>
                     <p>Analiza el rendimiento de tus chatbots y landing pages con reportes detallados.</p>
@@ -278,7 +280,7 @@
 
     <!-- CTA Final -->
     <section id="cta" class="scroll-section">
-        <div class="container mx-auto text-center max-w-3xl">
+        <div class="container mx-auto text-center max-w-3xl reveal-up">
             <h2 class="section-title">Da el salto a la automatización.</h2>
             <p class="text-xl text-gray-300 mb-8">¿Listo para dejar de perder tiempo y empezar a capturar cada oportunidad 24/7? Agenda una consulta gratuita y descubre cómo Sting-AI transformará tu atención al cliente y tus ventas.</p>
             <a href="https://wa.me/526181110696?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20gratuita." class="btn btn-primary">Agendar Consulta por WhatsApp</a>
@@ -304,6 +306,20 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: false
+        });
+
+        sr.reveal('.reveal-up', { origin: 'bottom', interval: 100 });
+        sr.reveal('.reveal-left', { origin: 'left', delay: 200 });
+        sr.reveal('.reveal-right', { origin: 'right', delay: 200 });
+        sr.reveal('.reveal-zoom', { scale: 0.9, interval: 100 });
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
