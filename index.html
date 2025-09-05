@@ -122,7 +122,71 @@
             margin-bottom: 1rem;
             color: #06b6d4;
         }
-    </style>
+    .mockup-wrapper {
+            width: 90vw;
+            max-width: 400px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+            border: 8px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .mockup-base {
+            width: 100%;
+            height: 100%;
+            background-color: #111b21; /* Color de fondo oscuro de WhatsApp */
+            border-radius: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .mockup-camera {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .mockup-speaker {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+            margin-left: 20px;
+        }
+        .mockup-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+        .mockup-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .mockup-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        </style>
 </head>
 <body>
 
@@ -154,7 +218,7 @@
     <section class="scroll-section">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="text-left reveal-left">
+                <div class="text-center md:text-left reveal-left">
                     <h1 class="text-5xl font-bold mb-4">Presentamos <span class="brand-cyan">Sting-AI</span>: Tu Asistente Virtual Inteligente.</h1>
                     <p class="text-xl text-gray-300 mb-6">Sting-AI es la <strong>plataforma de automatización definitiva</strong> que trabaja por ti 24/7. Nuestro escorpión inteligente captura, atiende y agenda por WhatsApp, llamadas y tu propia landing page, para que tú te dediques exclusivamente a <strong>hacer crecer tu negocio</strong>.</p>
                     <a href="#cta" class="btn btn-primary">Descubre cómo</a>
@@ -278,12 +342,77 @@
         </div>
     </section>
 
+    <!-- WhatsApp Simulations Section -->
+    <section id="whatsapp-simulations" class="scroll-section bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title reveal-up">Mira cómo funciona nuestro asistente</h2>
+            <div class="w-full flex flex-col lg:flex-row justify-center items-start gap-6 md:gap-10">
+                <!-- First Simulation -->
+                <div class="flex flex-col items-center w-full lg:w-auto">
+                    <h3 class="text-xl font-bold mb-2 text-white">1. Conversación con el Cliente</h3>
+                    <div class="phone-frame">
+                        <div class="phone-chat-header">
+                            <img src="images/logo.png" alt="Sting-AI Logo">
+                            <div>
+                                <div>Sting-AI</div>
+                                <div class="text-xs text-gray-400">en línea</div>
+                            </div>
+                        </div>
+                        <div class="phone-chat-body">
+                            <div class="message-bubble received">¡Hola! Bienvenido/a a Sting-AI.</div>
+                            <div class="message-bubble sent">Hola, quiero agendar una cita.</div>
+                            <div class="message-bubble received">¡Claro! ¿Para qué servicio?</div>
+                            <div class="message-bubble sent">Corte de caballero.</div>
+                            <div class="message-bubble received">Perfecto. Tengo disponibilidad mañana a las 3:00 PM. ¿Te parece bien?</div>
+                            <div class="message-bubble sent">Sí, me parece perfecto.</div>
+                            <div class="message-bubble received">¡Listo! Tu cita ha sido agendada.<br>Te esperamos en: [Dirección del negocio]<br>Ubicación: <a href="https://maps.app.goo.gl/EJ23456789" target="_blank" class="text-blue-600 underline">https://maps.app.goo.gl/EJ23456789</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Simulation -->
+                <div class="flex flex-col items-center w-full lg:w-auto">
+                    <h3 class="text-xl font-bold mb-2 text-white">2. Notificación al Dueño del Negocio</h3>
+                    <div class="phone-frame">
+                        <div class="phone-chat-header">
+                            <img src="images/logo.png" alt="Asistente IA">
+                            <div>
+                                <div>Asistente IA</div>
+                                <div class="text-xs text-gray-400">en línea</div>
+                            </div>
+                        </div>
+                        <div class="phone-chat-body">
+                            <div class="message-bubble received">¡Hola! Se ha agendado una nueva cita.<br>Cliente: Juan Pérez<br>Servicio: Corte de caballero<br>Fecha: Mañana, 3:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Simulation -->
+                <div class="flex flex-col items-center w-full lg:w-auto">
+                    <h3 class="text-xl font-bold mb-2 text-white">3. Recordatorio al Cliente</h3>
+                    <div class="phone-frame">
+                        <div class="phone-chat-header">
+                            <img src="images/logo.png" alt="Sting-AI Logo">
+                            <div>
+                                <div>Sting-AI</div>
+                                <div class="text-xs text-gray-400">en línea</div>
+                            </div>
+                        </div>
+                        <div class="phone-chat-body">
+                            <div class="message-bubble received">¡Hola! Solo para recordarte tu cita de Corte de caballero mañana a las 3:00 PM.<br><br>Si deseas reagendar, puedes responder a este mensaje.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- CTA Final -->
     <section id="cta" class="scroll-section">
         <div class="container mx-auto text-center max-w-3xl reveal-up">
-            <h2 class="section-title">Da el salto a la automatización.</h2>
+            <h2 class="section-title text-center">Da el salto a la automatización.</h2>
             <p class="text-xl text-gray-300 mb-8">¿Listo para dejar de perder tiempo y empezar a capturar cada oportunidad 24/7? Agenda una consulta gratuita y descubre cómo Sting-AI transformará tu atención al cliente y tus ventas.</p>
-            <a href="https://wa.me/526181110696?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20gratuita." class="btn btn-primary">Agendar Consulta por WhatsApp</a>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/526181110696?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20gratuita." class="btn text-white bg-green-500 hover:bg-green-600">Agendar por WhatsApp</a>
+                <a href="tel:6181110696" class="btn btn-secondary">Agendar por Llamada</a>
+            </div>
         </div>
     </section>
 
@@ -302,9 +431,16 @@
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
     </script>
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -321,6 +457,6 @@
         sr.reveal('.reveal-right', { origin: 'right', delay: 200 });
         sr.reveal('.reveal-zoom', { scale: 0.9, interval: 100 });
     </script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
