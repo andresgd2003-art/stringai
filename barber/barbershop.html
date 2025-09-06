@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Clásica Barber Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="La Clásica Logo" class="logo">
+                La Clásica
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#barberos">Barberos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex justify-content-center align-items-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>La Clásica Barber Shop</h1>
+            <p class="lead" data-aos="fade-up">Estilo y Tradición en Cada Corte</p>
+            <a href="#contacto" class="btn btn-primary btn-lg" data-aos="zoom-in">Agenda tu Cita</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Corte de Caballero</h5>
+                            <p class="card-text">Corte clásico o moderno con máquina y/o tijera.</p>
+                            <p class="card-text fw-bold">$250 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Alineado de Barba y Bigote</h5>
+                            <p class="card-text">Definición y perfilado con navaja para un look impecable.</p>
+                            <p class="card-text fw-bold">$180 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Afeitado Clásico (Ritual)</h5>
+                            <p class="card-text">Afeitado con toalla caliente, navaja y productos premium.</p>
+                            <p class="card-text fw-bold">$300 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tratamiento Facial</h5>
+                            <p class="card-text">Limpieza e hidratación para la piel del hombre.</p>
+                            <p class="card-text fw-bold">$400 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Paquete Clásico (Corte + Barba)</h5>
+                            <p class="card-text">El servicio completo para un mantenimiento perfecto.</p>
+                            <p class="card-text fw-bold">$400 MXN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="barberos" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Sobre Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center" data-aos="fade-right">
+                    <img loading="lazy" src="images/logo.png" alt="La Clásica Logo" class="about-logo img-fluid">
+                </div>
+                <div class="col-md-8" data-aos="fade-left">
+                    <h3>Nuestra Historia</h3>
+                    <p style="text-align: justify;">Juan Pérez, fundador de La Clásica, ha dedicado su vida al arte de la barbería. Con la misión de revivir la experiencia tradicional del cuidado masculino, La Clásica ofrece un refugio donde el estilo y la calidad son la prioridad.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h3 class="text-center" data-aos="fade-up">Nuestros Barberos</h3>
+                </div>
+                <div class="col-md-6 text-center" data-aos="zoom-in">
+                    <img loading="lazy" src="images/barber1.jpg" class="img-fluid rounded-circle mb-2 barber-img" alt="Barbero 1">
+                    <h5>Carlos Ramírez</h5>
+                    <p>Especialista en cortes clásicos y afeitado con navaja.</p>
+                </div>
+                <div class="col-md-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img loading="lazy" src="images/barber2.jpg" class="img-fluid rounded-circle mb-2 barber-img" alt="Barbero 2">
+                    <h5>Luis González</h5>
+                    <p>Experto en diseños modernos y cuidado de la barba.</p>
+                </div>
+            </div>
+            <h3 class="text-center mt-5" data-aos="fade-up">Galería del Local</h3>
+            <div class="row mt-4">
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up">
+                    <img loading="lazy" src="images/local1.jpg" class="img-fluid" alt="Local 1">
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="100">
+                    <img loading="lazy" src="images/local2.jpg" class="img-fluid" alt="Local 2">
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img loading="lazy" src="images/local3.jpg" class="img-fluid" alt="Local 3">
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
+                    <img loading="lazy" src="images/local4.jpg" class="img-fluid" alt="Local 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Reseñas</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">Excelente Servicio</h5>
+                                <div>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"El mejor corte que he tenido en años. Muy profesionales."</p>
+                            <p class="card-text"><small class="text-muted review-name">- Juan García</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">Gran Ambiente</h5>
+                                <div>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"Un lugar muy agradable y con barberos de primera."</p>
+                            <p class="card-text"><small class="text-muted review-name">- Pedro Martinez</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">¡Volveré!</h5>
+                                <div>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">"El ritual de afeitado es una experiencia que todos deberían probar."</p>
+                            <p class="card-text"><small class="text-muted review-name">- José Hernández</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Ubicación</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="ratio ratio-16x9">
+                        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.523622319233!2d-99.1332089855499!3d19.43260778688179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92f5a8f5a8f%3A0x4d5a8f5a8f5a8f5a!2sZ%C3%B3calo!5e0!3m2!1ses-419!2smx!4v1620826349402!5m2!1ses-419!2smx" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3>Nuestra Dirección</h3>
+                    <p>Av. Siempre Viva 123, Colonia Centro, C.P. 06000, Ciudad de México</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Cómo Llegar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Dudas Comunes</h2>
+            <div class="accordion" id="faqAccordion" data-aos="fade-up">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Necesito agendar una cita?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, recomendamos agendar para asegurar tu lugar, aunque también atendemos sin cita si hay disponibilidad.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Qué métodos de pago aceptan?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Aceptamos efectivo, tarjetas de crédito/débito y transferencias.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Venden productos para el cuidado de la barba?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ¡Claro! Contamos con una selección de los mejores aceites, bálsamos y ceras.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-5 bg-dark">
+        <div class="container text-center">
+            <h2 class="text-center mb-4" data-aos="fade-up">Agenda tu Cita</h2>
+            <p data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="contact-buttons">
+                <a href="https://wa.me/526181110696?text=Buen%20Dia!%20Me%20gustaria%20agendar%20una%20cita&send=1" target="_blank" class="btn btn-success btn-lg me-3">
+                    <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+                </a>
+                <a href="tel:6181110696" class="btn btn-info btn-lg">
+                    <i class="fas fa-phone"></i> Agendar por Llamada
+                </a>
+            </p>
+            <h3 class="mt-5" data-aos="fade-up">Síguenos en Redes Sociales</h3>
+            <p data-aos="fade-up" data-aos-delay="100">
+                <a href="#" class="text-white me-3">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="#" class="text-white">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Return to Presentation Section -->
+    <section class="py-5 text-center bg-dark">
+        <div class="container">
+            <a href="../index.html#landing-page-examples" class="btn btn-outline-light">Regresar a la Presentación</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p>Teléfono: 618-111-0696</p>
+            <p>Horario: Lunes a Sábado de 10:00 a 20:00 hrs</p>
+            <p class="mb-0">© 2025 La Clásica Barber Shop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Particles.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

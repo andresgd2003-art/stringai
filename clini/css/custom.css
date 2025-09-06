@@ -1,0 +1,133 @@
+        /* Custom CSS Overrides for a more professional look */
+        :root {
+            --brand-primary: #0d47a1; /* A deeper, more professional blue */
+            --brand-secondary: #343a40; /* A dark grey for the footer and navbar */
+            --brand-accent: #17a2b8;   /* A vibrant teal for accents */
+            --text-dark: #212529;
+            --text-light: #f8f9fa;
+            --font-headings: 'Poppins', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --font-logo: 'Playfair Display', serif; /* Font for the logo */
+            --star-color: #fbb400; /* Gold color for stars */
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .uk-heading-primary, .uk-heading-medium, .uk-card-title, .uk-accordion-title {
+            font-family: var(--font-headings);
+            font-weight: 700;
+        }
+
+        /* Style for the "Bienvenidos" heading */
+        #about .uk-text-primary {
+            color: var(--brand-accent) !important; /* Use !important to override framework styles */
+        }
+
+        .uk-button-primary {
+            background-color: var(--brand-primary);
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .uk-button-primary:hover {
+            background-color: #002171;
+        }
+
+        .uk-section-primary {
+            background-color: var(--brand-primary);
+        }
+
+        .uk-section-secondary {
+            background-color: var(--brand-secondary);
+        }
+
+        .uk-light a:not(.uk-button),
+        .uk-section-primary a:not(.uk-button),
+        .uk-section-secondary a:not(.uk-button) {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .uk-light a:not(.uk-button):hover,
+        .uk-section-primary a:not(.uk-button):hover,
+        .uk-section-secondary a:not(.uk-button):hover {
+            color: #e0e0e0;
+        }
+
+        .uk-accordion-title {
+            color: var(--brand-primary);
+            font-size: 1.2em;
+        }
+
+        .uk-card-hover:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+        }
+
+        /* --- Dark Toolbar Styles (Always On & Forceful) --- */
+        .uk-navbar-container {
+            background: var(--brand-secondary) !important;
+        }
+
+        .uk-navbar-nav > li > a, .uk-navbar-toggle .uk-icon {
+            color: var(--text-light) !important;
+            transition: color 0.3s ease;
+        }
+
+        .uk-navbar-nav > li > a {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-family: var(--font-headings);
+        }
+
+        .uk-navbar-nav > li > a:hover,
+        .uk-navbar-nav > li.uk-active > a,
+        .uk-navbar-toggle:hover .uk-icon {
+            color: var(--brand-accent) !important;
+        }
+
+        .uk-sticky.uk-navbar-container {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .uk-logo-text {
+            color: var(--text-light);
+            font-size: 1.3em;
+            font-family: var(--font-logo);
+            line-height: 1;
+            font-weight: 700;
+        }
+
+/* --- Mobile Optimizations --- */
+@media (max-width: 640px) {
+    
+    /* Improve readability on small screens */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    p, .uk-text-large {
+        font-size: 1.1rem;
+    }
+
+    /* Reduce vertical spacing on sections */
+    .uk-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .uk-heading-medium {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .uk-heading-primary {
+        font-size: 2.8rem;
+    }
+}
