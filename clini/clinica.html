@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea Dental Studio | Cuidado Dental Profesional</title>
+    <meta name="description" content="Linea Dental Studio, líder en servicios de odontología general, cosmética, ortodoncia e implantes. Agenda tu cita hoy.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Linea Dental Studio",
+      "image": "images/logo.png",
+      "@id": "",
+      "url": "",
+      "telephone": "+526181110696",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Falsa 123",
+        "addressLocality": "Ciudad",
+        "postalCode": "12345",
+        "addressCountry": "PA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.052235,
+        "longitude": -118.243683
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      } 
+    }
+    </script>
+</head>
+<body>
+
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="#">
+                            <img src="images/logo sin texto.png" alt="Logo Linea Dental Studio" style="height: 70px; border-radius: 50%;">
+                            <span class="uk-logo-text uk-margin-small-left uk-text-middle">Linea Dental Studio</span>
+                        </a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li class="uk-active"><a href="#" uk-scroll>Inicio</a></li>
+                            <li><a href="#about" uk-scroll>Sobre Nosotros</a></li>
+                            <li><a href="#services" uk-scroll>Servicios</a></li>
+                            <li><a href="#team" uk-scroll>Equipo</a></li>
+                            <li><a href="#location" uk-scroll>Ubicación</a></li>
+                            <li><a href="#testimonials" uk-scroll>Testimonios</a></li>
+                            <li><a href="#contact" uk-scroll>Contacto</a></li>
+                        </ul>
+                        <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="uk-section-large uk-light uk-background-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/hero_banner.jpg);">
+            <div class="uk-container">
+                <div class="uk-text-center">
+                    <h1 class="uk-heading-primary" data-aos="fade-down">Tu Sonrisa, Nuestra Pasión</h1>
+                    <p class="uk-text-lead" data-aos="fade-up" data-aos-delay="200">Cuidado dental de vanguardia en un ambiente amigable y profesional.</p>
+                    <a class="uk-button uk-button-primary uk-button-large" href="#contact" uk-scroll data-aos="zoom-in" data-aos-delay="400">Agenda tu Cita Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="uk-section">
+            <div class="uk-container">
+                <h2 class="uk-heading-medium uk-text-center uk-text-primary" data-aos="fade-up">Bienvenidos a Linea Dental Studio</h2>
+                <div class="uk-grid-large uk-flex-middle" uk-grid>
+                    <div class="uk-width-1-2@m" data-aos="fade-right">
+                        <img src="images/clinic_interior_reception.jpg" alt="Recepción de la clínica" class="uk-border-rounded" uk-img>
+                    </div>
+                    <div class="uk-width-1-2@m" data-aos="fade-left">
+                        <p class="uk-text-large">Desde nuestra fundación, nos hemos dedicado a proporcionar la mejor y más completa atención odontológica. Creemos en un enfoque personalizado, utilizando la última tecnología para garantizar que cada paciente reciba el mejor tratamiento posible en un entorno cómodo y seguro. Nuestro equipo de profesionales está comprometido con tu salud y bienestar dental, ofreciendo una experiencia que supera las expectativas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <h2 class="uk-heading-medium uk-text-center" data-aos="fade-up">Nuestros Servicios</h2>
+                <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid="masonry: true">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-media-top">
+                                <img src="images/service_general_dentistry.jpg" alt="Odontología General">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Odontología General</h3>
+                                <p>Exámenes de rutina, limpiezas, empastes y más para mantener tu salud dental.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-media-top">
+                                <img src="images/service_cosmetic_dentistry.jpg" alt="Odontología Cosmética">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Odontología Cosmética</h3>
+                                <p>Mejora tu sonrisa con blanqueamientos, carillas y coronas estéticas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-media-top">
+                                <img src="images/service_orthodontics.jpg" alt="Ortodoncia">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Ortodoncia</h3>
+                                <p>Alinea tus dientes y mejora tu mordida con brackets o alineadores invisibles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-media-top">
+                                <img src="images/service_implants.jpg" alt="Implantes">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Implantes Dentales</h3>
+                                <p>Una solución permanente y de aspecto natural para reemplazar dientes perdidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="team" class="uk-section">
+            <div class="uk-container">
+                <h2 class="uk-heading-medium uk-text-center" data-aos="fade-up">Nuestro Equipo Profesional</h2>
+                <div class="uk-child-width-1-2@m" uk-grid>
+                    <div data-aos="zoom-in-right">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="150" height="150" src="images/dentist_profile_dr_smith.jpg" alt="Doctor Smith">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Dr. Alex Smith</h3>
+                                <p class="uk-text-meta uk-margin-remove-top">Director de la Clínica</p>
+                                <p>Con más de 15 años de experiencia, el Dr. Smith es un especialista en implantología y odontología cosmética.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-left">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="150" height="150" src="images/staff_team.jpg" alt="Equipo de la clínica">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Personal de Apoyo</h3>
+                                <p class="uk-text-meta uk-margin-remove-top">Higienistas y Asistentes</p>
+                                <p>Nuestro equipo de apoyo trabaja para garantizar que tu visita sea cómoda, eficiente y agradable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="location" class="uk-section">
+            <div class="uk-container">
+                <h2 class="uk-heading-medium uk-text-center" data-aos="fade-up">Nuestra Ubicación</h2>
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid data-aos="zoom-in">
+                    <div class="uk-card-media-left">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.523622319233!2d-99.1332089855499!3d19.43260778688179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92f5a8f5a8f%3A0x4d5a8f5a8f5a8f5a!2sZ%C3%B3calo!5e0!3m2!1ses-419!2smx!4v1620826349402!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Visítanos</h3>
+                            <p>Estamos convenientemente ubicados en el corazón de la ciudad. ¡Esperamos verte pronto!</p>
+                            <p><strong>Dirección:</strong><br>Calle Falsa 123, Ciudad, País</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=34.052235,-118.243683" target="_blank" class="uk-button uk-button-primary uk-margin-top">Abrir en Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="testimonials" class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <h2 class="uk-heading-medium uk-text-center" data-aos="fade-up">Lo que dicen nuestros pacientes</h2>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 5000">
+
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid">
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"El mejor trato que he recibido en una clínica dental. El personal es increíblemente amable y profesional. ¡Recomendado al 100%!"</p>
+                                <p class="uk-text-meta uk-margin-small-top">- María G.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"Tenía mucho miedo de ir al dentista, pero el Dr. Smith y su equipo me hicieron sentir muy cómodo. El procedimiento fue indoloro."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Juan P.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"Instalaciones modernas y limpias. Se nota que invierten en tecnología y en la comodidad del paciente. Muy satisfecho."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Laura R.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"La atención al detalle es impresionante. Se tomaron el tiempo para explicarme todo el proceso. Me sentí en muy buenas manos."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Carlos S.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+                </div>
+                
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+            </div>
+        </div>
+
+        <div id="faq" class="uk-section">
+            <div class="uk-container uk-container-small" data-aos="fade-up">
+                <h2 class="uk-heading-medium uk-text-center">Preguntas Frecuentes</h2>
+                <ul uk-accordion>
+                    <li>
+                        <a class="uk-accordion-title" href="#">¿Aceptan mi seguro dental?</a>
+                        <div class="uk-accordion-content">
+                            <p>Aceptamos una amplia variedad de planes de seguro. Por favor, contáctanos con tu información para verificar la cobertura.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href="#">¿Ofrecen opciones de financiamiento?</a>
+                        <div class="uk-accordion-content">
+                            <p>Sí, ofrecemos planes de pago flexibles para ayudar a que el tratamiento sea más asequible. Pregunta a nuestro personal administrativo por las opciones disponibles.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title" href="#">¿Cómo debo prepararme para mi primera visita?</a>
+                        <div class="uk-accordion-content">
+                            <p>Por favor, trae una identificación, tu tarjeta de seguro si la tienes, y una lista de los medicamentos que estés tomando. Llega 15 minutos antes para completar el papeleo.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contact" class="uk-section uk-section-primary uk-light">
+            <div class="uk-container uk-container-small">
+                <h2 class="uk-heading-medium uk-text-center" data-aos="zoom-in">Agenda tu Cita</h2>
+                <p class="uk-text-center uk-text-lead">La forma más rápida de contactarnos es a través de WhatsApp o por teléfono.</p>
+                <div class="uk-text-center uk-margin-large-top" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://wa.me/5216181110696?text=Hola!%20quiero%20agendar%20mi%20cita" target="_blank" class="uk-button uk-button-secondary uk-margin-small-right" style="background-color: #25D366; color: white; border-radius: 50px;">
+                        <span uk-icon="whatsapp"></span> Enviar WhatsApp
+                    </a>
+                    <a href="tel:+526181110696" class="uk-button uk-button-secondary" style="border-radius: 50px; background-color: var(--brand-accent); color: white;">
+                        <span uk-icon="receiver"></span> Llamar Ahora
+                    </a>
+                </div>
+
+                <!-- End Contact Form -->
+
+                <div class="uk-text-center uk-margin-medium-top" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
+                    <a href="#" class="uk-icon-button" uk-icon="facebook"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="uk-section uk-section-secondary uk-light">
+        <div class="uk-container">
+            <div class="uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <h4 class="uk-text-primary">Linea Dental Studio</h4>
+                    <p>Comprometidos con la excelencia en el cuidado dental.</p>
+                </div>
+                <div>
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="uk-list uk-list-bullet">
+                        <li><a href="#about" class="uk-link-muted" uk-scroll>Sobre Nosotros</a></li>
+                        <li><a href="#services" class="uk-link-muted" uk-scroll>Servicios</a></li>
+                        <li><a href="#faq" class="uk-link-muted" uk-scroll>Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Recursos para Pacientes</h4>
+                    <ul class="uk-list uk-list-bullet">
+                        <li><a href="#" class="uk-link-muted">Formularios para Pacientes (PDF)</a></li>
+                        <li><a href="#" class="uk-link-muted">Información de Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top">
+                <a href="../index.html#landing-page-examples" class="uk-button uk-button-secondary uk-border-rounded">Regresar a la Presentación</a>
+            </div>
+            <div class="uk-text-center uk-margin-large-top">
+                <p>&copy; 2025 <span class="uk-text-primary uk-text-bold">Linea Dental Studio</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Off-canvas navigation for mobile -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#" uk-scroll>Inicio</a></li>
+                <li><a href="#about" uk-scroll>Sobre Nosotros</a></li>
+                <li><a href="#services" uk-scroll>Servicios</a></li>
+                <li><a href="#team" uk-scroll>Equipo</a></li>
+                <li><a href="#testimonials" uk-scroll>Testimonios</a></li>
+                <li><a href="#location" uk-scroll>Ubicación</a></li>
+                <li><a href="#contact" uk-scroll>Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+
+</body>
+</html>ipt>
+
+</body>
+</html>html>/html>ación de Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top">
+                <a href="venta.html" class="uk-button uk-button-secondary uk-border-rounded">Regresar a la Presentación</a>
+            </div>
+            <div class="uk-text-center uk-margin-large-top">
+                <p>&copy; 2025 <span class="uk-text-primary uk-text-bold">Linea Dental Studio</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Off-canvas navigation for mobile -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#" uk-scroll>Inicio</a></li>
+                <li><a href="#about" uk-scroll>Sobre Nosotros</a></li>
+                <li><a href="#services" uk-scroll>Servicios</a></li>
+                <li><a href="#team" uk-scroll>Equipo</a></li>
+                <li><a href="#testimonials" uk-scroll>Testimonios</a></li>
+                <li><a href="#location" uk-scroll>Ubicación</a></li>
+                <li><a href="#contact" uk-scroll>Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+
+</body>
+</html>ipt>
+
+</body>
+</html>html>/html>
